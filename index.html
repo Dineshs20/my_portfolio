@@ -13,18 +13,19 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
+                <img src="images/logo.png" class="logo" class="logo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li id="aboutButton"><a href="#">About</a></li>
+                    <li id="serviceButton"><a href="#">Services</a></li>
+                    <li id="portfolioButton"><a href="#">Portfolio</a></li>
+                    <li id="contactButton"><a href="#">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-text">
                 <p>Web Developer</p>
                 <h1>Hi,I'm <span>Dinesh</span><br> From Tamil nadu.</h1>
+                <img src="" alt="">
             </div>
         </div>
     </div>
@@ -33,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/content5.jpeg" alt="">
+                    <img src="images/DSC00194-01.jpeg" alt="">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -56,21 +57,22 @@
                             <li><span>UI/UX</span><br>Designing Web interfaces</li>
                             <li><span>Web Development</span><br>Creating Attractive Web sites</li>
                             <li><span>Photoshop</span><br>Editing awesome pictures</li>
+                            <li><span>Graphic Designer</span><br>(After Effects, Canva, Capcut)</li>
                             <li><span>Python</span></li>
                             <li><span>C programing</span></li>
                         </ul>
                      </div>
                      <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2018</span><br>Completed Higher studies in J.K.k.N Mat Hr Sec School,<br>Komarapalayam.</li>
-                            <li><span>2020</span><br>BE.CSE at Nandha engg clg, perundurai.</li>
-                            <li><span>2022</span><br>Web Development at IFC Infotech.</li>
+                            <li><span>2018</span><br>Completed Higher studies in J.K.k.N Matric Hr Sec School,<br>Komarapalayam.</li>
+                            <li><span>2020</span><br>BE.CSE @ Nandha Engineering College, perundurai.</li>
+                            <li><span>2022</span><br>Web Development @ IFC Infotech.</li>
                             
                         </ul>
                      </div>
                      <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Fresher</span></li>
+                            <li><span>Digital Marketing</span><br>Social Media Marketing</li>
                         </ul>
                      </div>
                 </div>
@@ -87,19 +89,19 @@
                     <i class="fa-sharp fa-solid fa-code"></i>
                     <h2>Web Design</h2>
                     <p></p>
-                    <a href="#">Learn more</a>
+                    <a href="https://github.com/Dineshs20">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop"></i>
                     <h2>UI/UX Design</h2>
                     <p></p>
-                    <a href="#">Learn more</a>
+                    <a href="https://www.figma.com/resource-library/difference-between-ui-and-ux">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-pen-to-square"></i>
-                    <h2>PhotoShop</h2>
+                    <h2>Digital Marketing</h2>
                     <p></p>
-                    <a href="#">Learn more</a>
+                    <a href="https://www.investopedia.com/terms/m/marketing.asp#:~:text=Marketing%20refers%20to%20the%20activities,%2C%20other%20businesses%2C%20and%20organizations">Learn more</a>
                 </div>
             </div>
         </div>
@@ -112,7 +114,7 @@
                 <div class="work">
                     <img src="images/work-1.png">
                     <div class="layer">
-                        <h3>Blood donate App</h3>
+                        <h3>Hair studio</h3>
                         <p>This App connects you to the talented people around the world.
                         </p>
                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
@@ -122,7 +124,7 @@
                     <img src="images/work-2.png">
                     <div class="layer">
                         <h3>Music App</h3>
-                        <p>This App connects you to the talented people around the world.
+                        <p>Our algorithm learns your preferences and suggests new music you'll love.
                         </p>
                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
@@ -131,13 +133,13 @@
                     <img src="images/work-3.png">
                     <div class="layer">
                         <h3>Online shopping app</h3>
-                        <p>This App connects you to the talented people around the world.
+                        <p>Discover a world of convenience and savings right at your fingertips.
                         </p>
                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See More</a>
+            <a href="https://dinesh72610.wixsite.com/dinesh" class="btn">See More</a>
         </div>
     </div>
     <!-------Contact-------->
@@ -186,7 +188,15 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-    </script>
+        function scrollToDiv(divId){
+            const targetDiv = document.getElementById(divId)
+            targetDiv.scrollIntoView({behavior:"smooth"});
+        }
+        document.getElementById('contactButton').addEventListener('click',()=>scrollToDiv('contact'))
+        document.getElementById('aboutButton').addEventListener('click',()=>scrollToDiv('about'))
+        document.getElementById('serviceButton').addEventListener('click',()=>scrollToDiv('services'))
+        document.getElementById('portfolioButton').addEventListener('click',()=>scrollToDiv('portfolio'))
+        </script>
     
 </body>
 </html>
